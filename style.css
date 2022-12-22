@@ -65,11 +65,11 @@ nav a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.8rem;
-    margin-block: 1rem;
+    gap: 8px;
+    margin-block: 10px;
 
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
     color: #0B72CB;
 
     cursor: pointer;
@@ -88,38 +88,33 @@ nav img{
 
 
 div.box{
-    padding-inline: 2rem;
+    padding-inline: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 4.5rem;
-    margin-inline: 6rem;
+    margin-top: 45px;
+    margin-inline: 6px;
 }
 
 div.box img{
-    max-width: 5rem;
-    max-height: 5rem;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 div.box div{
-    margin-inline: 2rem;    
+    margin-inline: 20px;    
     display: flex;
     flex-direction: row;
-    height: 10rem;
-    max-height: 15rem;
-    max-width: 25rem;
+    height: 100px;
+    max-height: 150px;
+    max-width: 250px;
     background-color: white;
 }
 
 div.box div h3{
 
-    font-size: 1.4rem;
+    font-size: 14px;
     color: rgb(161, 159, 159);
-}
-
-div.box div h1{
-
-    font-size: 1.6rem;
 }
 
 div.box div.box-info div{
