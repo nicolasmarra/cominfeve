@@ -19,7 +19,7 @@
         <h1>ComInfEve</h1>
 
         <div>
-            <img src="./assets/user-circle-solid-60.png" alt="">
+            <img src="./assets/user-circle-solid-48.png" alt="">
             <h3>Helena</h3>
         </div>
     </header>
@@ -47,7 +47,7 @@
 
                 <div >
                     <h3>Commandes</h3>
-                    <h2><?php echo getNumberOrder() ?></h2>
+                    <h2><?php echo getNumberOrder()?></h2>
                 </div>  
             </div>
 
@@ -93,7 +93,7 @@
 
                 <div>
                     <h3>Clients</h3>
-                    <h2>1</h2>
+                    <h2><?php echo getNumberClient()?></h2>
                 </div>  
             </div>
 
@@ -104,7 +104,7 @@
 
                 <div>
                     <h3>Fournisseur</h3>
-                    <h2>3</h2>  
+                    <h2><?php echo getNumberProvider()?></h2>  
                 </div>
             </div>
 
@@ -114,8 +114,8 @@
                 </div>
 
                 <div>
-                    <h3>Articles disponible</h3>
-                    <h2>1</h2>
+                    <h3>Articles disponibles</h3>
+                    <h2><?php echo getNumberItemsAvailable()?></h2>
                 </div>  
             </div>
 
@@ -125,8 +125,8 @@
                 </div>
 
                 <div>
-                    <h3>Catégories d'articles disponible</h3>
-                    <h2>1</h2>
+                    <h3>Catégories d'articles disponibles</h3>
+                    <h2><?php echo getNumberCategoriesAvailable()?></h2>
                 </div>  
             </div>
         </div>
@@ -150,7 +150,7 @@
 
                 <div>
                     <h3>Le meilleur fournisseur</h3>
-                    <h2>Helena</h2>
+                    <h2><?php echo getNameBestSellingProvider()?></h2>
                 </div>  
             </div>
 
@@ -161,7 +161,7 @@
 
                 <div>
                     <h3>L'article le plus vendu</h3>
-                    <h2>1</h2>
+                    <h2><?php echo getNameBestSellingItem()?></h2>
                 </div>  
             </div>
 
@@ -172,7 +172,7 @@
 
                 <div>
                     <h3>La catégorie la plus vendue</h3>
-                    <h2>1</h2>
+                    <h2><?php echo getNameBestSellingCategory()?></h2>
                 </div>  
             </div>
         </div>

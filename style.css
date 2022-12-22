@@ -117,6 +117,11 @@ div.box div h3{
     color: rgb(161, 159, 159);
 }
 
+div.box div h2{
+
+    font-size: 16px;
+}
+
 div.box div.box-info div{
     display: flex;
     flex-direction: column;

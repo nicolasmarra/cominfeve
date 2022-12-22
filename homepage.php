@@ -40,6 +40,127 @@
             return $colonne[0];
 
         }
+
+        function getNumberClient(){
+            $requet="SELECT COUNT(*) FROM client;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNumberProvider(){
+            $requet="SELECT COUNT(*) FROM fournisseur;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNumberItemsAvailable(){
+            $requet="SELECT COUNT(*) FROM produit WHERE stockAlerte > 0;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNumberCategoriesAvailable(){
+            $requet="SELECT COUNT(DISTINCT C.codeCategorie) FROM categorie C INNER JOIN produit P ON C.codeCategorie = P.categorie WHERE P.stockAlerte > 0;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNameBestSellingItem(){
+            $requet="SELECT P.refProduit, P.designation, SUM(Dcl.quantite) as Total FROM commande_client C INNER JOIN detailler_commande_client Dcl ON Dcl.numCommandeClient = C.numCommandeCliant INNER JOIN produit P on Dcl.refProduit = P.refProduit Group BY P.refProduit, P.designation order by total DESC limit 1;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[1];
+            
+        }
+
+        function getNameBestSellingCategory(){
+            $requet="SELECT P.categorie, P.refProduit, P.designation, SUM(Dcl.quantite) as Total FROM commande_client C INNER JOIN detailler_commande_client Dcl ON Dcl.numCommandeClient = C.numCommandeCliant INNER JOIN produit P on Dcl.refProduit = P.refProduit INNER JOIN categorie Ca on Ca.codeCategorie = P.categorie Group BY P.refProduit, P.designation order by total DESC limit 1;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNameBestSellingProvider(){
+            $requet="SELECT DCF.numCommandeFournisseur, F.nomFournisseur , SUM(DCF.quantite * P.prixUnitaire) as Total FROM fournisseur F INNER JOIN detailler_commande_fournisseur DCF on DCF.numCommandeFournisseur = F.codeFournisseur
+            INNER JOIN produit P on P.refProduit = DCF.refProduit 
+            GROUP BY DCF.numCommandeFournisseur, F.nomFournisseur
+            ORDER BY TOTAL DESC 
+            LIMIT 1;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[1];
+            
+        }
+        
+        
+        
+        
+        
         
     ?>
 
