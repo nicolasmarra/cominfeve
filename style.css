@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 ul,a{
@@ -11,29 +12,35 @@ ul,a{
 
 body{
     font-style: 'Poppins', sans-serif;
-    font-size: 1.6rem;
+    font-size: 16px;
 
     background-color: rgb(248, 240, 240);
 }
 
 header{
-    height: 5rem;
+    height: 50px;
     width: 100vw;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: #00203b;
+}
 
+header div{
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    background-color: white;
+    justify-content: center;
+    gap: 15px;
+    
+    padding-inline: 50px;
 }
 
 header h1{
-    padding-inline: 2.5rem;
+    padding-inline: 25px;
 }
 
-header form{
-    font-size: 1.8rem;
-}
 
 div#wrapper{
     display: flex;
@@ -41,7 +48,7 @@ div#wrapper{
 }
 
 nav{
-    padding: 3.5rem 2.5rem;
+    padding-inline: 35px;
     max-width: 15%;
     height: 100vh;
 
@@ -50,8 +57,8 @@ nav{
 }
 
 nav ul{
-    margin-top: 2.5rem;
-    font-size: 1.8rem;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 nav a{
@@ -78,28 +85,29 @@ nav img{
     max-height: 24px;
 }
 
+
+
 div.box{
     padding-inline: 2rem;
     display: flex;
     flex-direction: row;
-    margin-top: 5rem;
-    margin-inline: 8rem;
+    align-items: center;
+    margin-top: 4.5rem;
+    margin-inline: 6rem;
+}
+
+div.box img{
+    max-width: 5rem;
+    max-height: 5rem;
 }
 
 div.box div{
-    margin-inline: 2rem;
-    align-items: center;
+    margin-inline: 2rem;    
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    align-content: center;
-    
+    flex-direction: row;
     height: 10rem;
-    width: 18rem;
-    max-height: 12rem;
+    max-height: 15rem;
     max-width: 25rem;
-    
     background-color: white;
 }
 
@@ -113,3 +121,10 @@ div.box div h1{
 
     font-size: 1.6rem;
 }
+
+div.box div.box-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

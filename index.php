@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-    <title>ComInfEve</title>
-</head>
-<body>
-    
+        <?php require "homepage.php" ?>
+    </head>
+    <body>
 
     <header>
+
         <h1>ComInfEve</h1>
+
+        <div>
+            <img src="./assets/user-circle-solid-60.png" alt="">
+            <h3>Helena</h3>
+        </div>
     </header>
 
     <div id="wrapper">
     <nav>
 
     <ul>
-        <li><a href="#"><img src="/assets/home-regular-24.png" alt="home logo">  Homepage</a></li>
-        <li><a href="#"><img src="/assets/truck-solid-24.png" alt="fournisseur logo"> Fournisseur</a></li>
-        <li><a href="#"><img src="/assets/briefcase-alt-regular-24.png" alt="employés logo">Employés</a></li>
-        <li><a href="#"><img src="/assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
-        <li><a href="#"><img src="/assets/user-regular-24.png" alt="clients logo">Clients</a></li>
-        <li><a href="#"><img src="/assets/package-regular-24.png" alt="">Commandes</a></li>
-        <li><a href="#"><img src="/assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
+        <li><a href="#"><img src="./assets/home-regular-24.png" alt="home logo">  Homepage</a></li>
+        <li><a href="#"><img src="./assets/truck-solid-24.png" alt="fournisseur logo"> Fournisseur</a></li>
+        <li><a href="#"><img src="./assets/briefcase-alt-regular-24.png" alt="employés logo">Employés</a></li>
+        <li><a href="#"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
+        <li><a href="#"><img src="./assets/user-regular-24.png" alt="clients logo">Clients</a></li>
+        <li><a href="#"><img src="./assets/package-regular-24.png" alt="">Commandes</a></li>
+        <li><a href="#"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
     </ul>
     </nav>
 
@@ -36,18 +41,18 @@
         <div class="box">
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/online-order-icon.png" alt="icone commandes">
                 </div>
 
-                <div>
+                <div >
                     <h3>Commandes</h3>
-                    <h2>1</h2>
+                    <h2><?php echo getNumberOrder() ?></h2>
                 </div>  
             </div>
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/sales_icon.png" alt="">
                 </div>
 
                 <div>
@@ -58,7 +63,7 @@
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/box-icon-6.jpg" alt="">
                 </div>
 
                 <div>
@@ -69,7 +74,7 @@
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/icon-for-applications-22.png" alt="">
                 </div>
 
                 <div>                
@@ -82,7 +87,7 @@
         <div class="box">
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/21-214875_key-achievements-icons-blue-community-transparent-background-customer.png" alt="">
                 </div>
 
                 <div>
@@ -93,7 +98,7 @@
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/wd-applet-supplier-management.png" alt="">
                 </div>
 
                 <div>
@@ -104,7 +109,7 @@
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/png-clipart-computer-icons-symbol-product-lifecycle-product-miscellaneous-blue-removebg-preview.png" alt="">
                 </div>
 
                 <div>
@@ -115,7 +120,7 @@
 
             <div class="box-info">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/3843537.png" alt="">
                 </div>
 
                 <div>
@@ -125,10 +130,10 @@
             </div>
         </div>
 
-        <div class="box">
-            <div class="box-info">
+        <div class="box" >
+            <div class="box-info" id="box-info1">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/1884184.png" alt="">
                 </div>
 
                 <div>
@@ -137,9 +142,9 @@
                 </div>  
             </div>
 
-            <div class="box-info">
+            <div class="box-info" id="box-info2">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/228-2281476_customer-experience-customer-computer-icons-blue-customer-experience.png" alt="">
                 </div>
 
                 <div>
@@ -148,9 +153,9 @@
                 </div>  
             </div>
 
-            <div class="box-info">
+            <div class="box-info" id="box-info3">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/3082805.png" alt="">
                 </div>
 
                 <div>
@@ -159,9 +164,9 @@
                 </div>  
             </div>
 
-            <div class="box-info">
+            <div class="box-info" id="box-info4">
                 <div>
-                    <img src="" alt="">
+                    <img src="./assets/3502688.png" alt="">
                 </div>
 
                 <div>
