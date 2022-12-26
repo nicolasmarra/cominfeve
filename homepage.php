@@ -156,12 +156,72 @@
             return $colonne[1];
             
         }
+
         
+        function getTotalSells(){
+            $requet="SELECT SUM(DCC.quantite * P.prixUnitaire) as TOTAL FROM detailler_commande_client DCC INNER JOIN produit P on P.refProduit = DCC.refProduit;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNumberItemsSold(){
+            $requet="SELECT COUNT(DISTINCT P.refProduit) FROM detailler_commande_client DCC INNER JOIN produit P on P.refProduit = DCC.refProduit;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
         
-        
-        
-        
-        
+        function getNumberCategoriesSold(){
+            $requet="SELECT COUNT(DISTINCT P.categorie) FROM detailler_commande_client DCC INNER JOIN produit P on P.refProduit = DCC.refProduit;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
+        function getNameBestSellingClient(){
+            $requet="SELECT C.nomClient, SUM(P.prixUnitaire * DCC.quantite) AS TOTAL FROM detailler_commande_client DCC INNER JOIN produit P on P.refProduit = DCC.refProduit INNER JOIN commande_client CC on CC.numCommandeCliant = DCC.numCommandeClient INNER JOIN client C on C.codeClient = CC.codeClient GROUP BY CC.codeClient ORDER BY TOTAL DESC LIMIT 1;";
+
+            $colonne = 0;
+			/* Exécution de la requête */
+			if( !$resultat = mysqli_query (getConnection(), $requet))
+			{     
+                echo "<p class=\"erreur\">Erreur de requête sur la base de données \"".$db."\".</p>";
+			}   
+				
+            $colonne = mysqli_fetch_row($resultat);         
+
+            return $colonne[0];
+            
+        }
+
     ?>
 
     

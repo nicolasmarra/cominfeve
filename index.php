@@ -16,10 +16,15 @@
 
     <header>
 
+
+        <div id="logo-date">
         <h1>ComInfEve</h1>
 
-        <div>
-            <img src="./assets/user-circle-solid-48.png" alt="">
+        <h3><?php date_default_timezone_set('Europe/Paris');  echo date("M j, Y, g:i a");?></h3>
+        </div>
+
+        <div id="user">
+            <img src="./assets/user-circle-solid-36.png" alt="">
             <h3>Helena</h3>
         </div>
     </header>
@@ -58,7 +63,7 @@
 
                 <div>
                     <h3>Ventes</h3>
-                    <h2>100€</h2>
+                    <h2><?php echo getTotalSells()?>€</h2>
                 </div>  
             </div>
 
@@ -69,7 +74,7 @@
 
                 <div>
                     <h3>Articles vendus</h3>
-                    <h2>1</h2>  
+                    <h2><?php echo getNumberItemsSold()?></h2>  
                 </div>
             </div>
 
@@ -80,7 +85,7 @@
 
                 <div>                
                     <h3>Catégories d'articles vendus</h3>
-                    <h2>1</h2>
+                    <h2><?php echo getNumberCategoriesSold()?></h2>
                 </div>  
             </div>
         </div>
@@ -139,7 +144,7 @@
 
                 <div>
                     <h3>Le meilleur client</h3>
-                    <h2>Helena</h2>
+                    <h2><?php echo getNameBestSellingClient() ?></h2>
                 </div>  
             </div>
 
