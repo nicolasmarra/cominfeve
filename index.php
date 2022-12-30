@@ -10,7 +10,7 @@
         <style>
         <?php include "style.css" ?>
         </style>
-        <?php require "homepage.php" ?>
+        <?php require "script_index.php" ?>
     </head>
     <body>
 
@@ -39,7 +39,7 @@
         <li><a href="#"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
         <li><a href="#"><img src="./assets/user-regular-24.png" alt="clients logo">Clients</a></li>
         <li><a href="#"><img src="./assets/package-regular-24.png" alt="">Commandes</a></li>
-        <li><a href="#"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
+        <li><a href="./categories.php"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégories</a></li>
     </ul>
     </nav>
 
