@@ -27,7 +27,7 @@ header{
     background-color: #00203b;
 }
 
-
+/* HEADER */
 header div{
     display: flex;
     flex-direction: row;
@@ -51,6 +51,8 @@ nav{
     color: #0B72CB;
     background-color: white;
 }
+
+/* MENU NAV */ 
 
 nav ul{
     margin-top: 20px;
@@ -81,14 +83,15 @@ nav img{
     max-height: 24px;
 }
 
+/* INDEX - DASHBOARD */ 
 
 div.box{
+    margin-top: 45px;
+    margin-inline: 6px;
     padding-inline: 15px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 45px;
-    margin-inline: 6px;
+    align-items: center;    
 }
 
 div.box img{
@@ -126,3 +129,76 @@ div.box div.box-info div{
     justify-content: center;
 }
 
+/* CATEGORIES - ADD */
+
+main div.add-view{
+    display: flex;
+}
+
+main div.add, main div.view{
+    margin-inline : 50px;
+    margin-top: 30px;
+    width: 350px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+main div div.top{
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 30px;
+    background-color: rgb(231, 226, 226);
+}
+
+main div div.ligne{
+    width: 350px;
+    height: 2px;
+    background-color: #0B72CB;
+    margin-bottom: 20px;
+}
+
+main div form {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    width: 300px;
+    margin-inline : 10px;
+}
+
+main div form input#texte{
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+main div form input#button{
+    width: 100px;
+    background-color: #0B72CB;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    border-color: #0B72CB;
+    cursor: pointer;
+}
+
+
+main table,th, tr,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+main th,td{
+    padding: 5px;
+}
+
+main th{
+    background-color: #0B72CB;
+    color: white;
+    font-weight: 700;
+}

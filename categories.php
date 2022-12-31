@@ -10,6 +10,8 @@
         <style>
         <?php include "style.css" ?>
         </style>
+        <?php require "script_categories.php" ?>
+
     </head>
     <body>
 
@@ -43,27 +45,68 @@
 
     <main >
 
+    <div class="add-view">
+    
     <div class="add">
 
-    <div>        
+        <div class="top">        
         
-        <img src="" alt="">
+        <img src="./assets/bxs-category.svg" alt="icône catégorie">
         <h3>Ajouter une nouvelle catégorie</h3>
 
-    </div>
+        </div>
 
-    <div>
+        <div class="ligne">
+        </div>
+
+        <div>
         
         <form action="">
-        <input type="text" placeholder = "Nom de la catégorie">
-        <input type="submit" value="Ajouter">
+        <input type="text" placeholder = "Nom de la catégorie" id="texte">
+        <input type="submit" value="Ajouter" id="button">
         </form>
 
-    </div>
+        </div>
 
     </div>
 
+    <div class="view">
 
+        <div class="top">        
+        
+        <img src="./assets/bxs-category.svg" alt="icône catégorie">
+        <h3>Toutes les catégories</h3>
+
+        </div>
+
+        <div class="ligne">
+        </div>
+
+        <div>
+        
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Catégorie</th>
+                <th>Description</th>
+            </tr>
+
+
+            <?php
+            $resultat = showCategories();
+            while ($colonne = mysqli_fetch_row($resultat))
+            {
+                 echo "<tr> <td>$colonne[0]</td> <td>$colonne[1]</td> <td>$colonne[2]</td> </tr>";
+            }
+            ?>
+            
+        </table>
+
+        </div>
+
+    </div>
+
+    </div>
     </main>
 
     </div>
