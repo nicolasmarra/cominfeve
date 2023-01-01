@@ -61,8 +61,10 @@
 
         <div>
         
-        <form action="">
-        <input type="text" placeholder = "Nom de la catégorie" id="texte">
+        <form method="POST" action = "./script_categories_form.php">
+        <input type="text" placeholder = "Code de catégorie" class="texte" name="code">
+        <input type="text" placeholder = "Nom de la catégorie" class="texte" name="nom">
+        <input type="text" placeholder = "Description" class="texte" name="description">
         <input type="submit" value="Ajouter" id="button">
         </form>
 
@@ -86,7 +88,7 @@
         
         <table>
             <tr>
-                <th>#</th>
+                <th>Code</th>
                 <th>Catégorie</th>
                 <th>Description</th>
             </tr>
