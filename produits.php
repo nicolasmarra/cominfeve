@@ -36,10 +36,10 @@
         <li><a href="./index.php"><img src="./assets/home-regular-24.png" alt="home logo">  Homepage</a></li>
         <li><a href="./fournisseur.php"><img src="./assets/truck-solid-24.png" alt="fournisseur logo"> Fournisseur</a></li>
         <li><a href="./employe.php"><img src="./assets/briefcase-alt-regular-24.png" alt="employés logo">Employés</a></li>
-        <li><a href="./produits.php"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
+        <li><a href="#"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
         <li><a href="./clients.php"><img src="./assets/user-regular-24.png" alt="clients logo">Clients</a></li>
         <li><a href="./commandes.php"><img src="./assets/package-regular-24.png" alt="">Commandes</a></li>
-        <li><a href="#"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
+        <li><a href="./categories.php"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
     </ul>
     </nav>
 
@@ -47,37 +47,12 @@
 
     <div class="add-view">
     
-    <div class="add">
-
-        <div class="top">        
-        
-        <img src="./assets/bxs-category.svg" alt="icône catégorie">
-        <h3>Ajouter une nouvelle catégorie</h3>
-
-        </div>
-
-        <div class="ligne">
-        </div>
-
-        <div>
-        
-        <form method="POST" action = "./script_categories_form.php">
-        <input type="text" placeholder = "Code de catégorie" class="texte" name="code">
-        <input type="text" placeholder = "Nom de la catégorie" class="texte" name="nom">
-        <input type="text" placeholder = "Description" class="texte" name="description">
-        <input type="submit" value="Ajouter" id="button">
-        </form>
-
-        </div>
-
-    </div>
-
     <div class="view">
 
         <div class="top">        
         
-        <img src="./assets/bxs-category.svg" alt="icône catégorie">
-        <h3>Toutes les catégories</h3>
+        <img src="./assets/bxs-user.svg" alt="icône catégorie">
+        <h3>Tous les produits</h3>
 
         </div>
 
@@ -88,17 +63,22 @@
         
         <table>
             <tr>
-                <th>Code</th>
+                <th>Référence</th>
                 <th>Catégorie</th>
-                <th>Description</th>
+                <th>Famille</th>
+                <th>Désignation</th>
+                <th>Export</th>
+                <th>Prix unitaire</th>
+                <th>TVA</th>
+                <th>Stock</th>
             </tr>
 
 
             <?php
-            $resultat = showCategories();
+            $resultat = showItems();
             while ($colonne = mysqli_fetch_row($resultat))
             {
-                 echo "<tr> <td>$colonne[0]</td> <td>$colonne[1]</td> <td>$colonne[2]</td> </tr>";
+                 echo "<tr> <td>$colonne[0]</td> <td>$colonne[1]</td> <td>$colonne[2]</td> <td>$colonne[3]</td> <td>$colonne[4]</td> <td>$colonne[5]</td> <td>$colonne[6]</td> <td>$colonne[7]</td></tr>";
             }
             ?>
             

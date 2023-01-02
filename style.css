@@ -41,13 +41,13 @@ header div{
 div#wrapper{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 nav{
     padding-inline: 35px;
     max-width: 15%;
     height: 100vh;
-
     color: #0B72CB;
     background-color: white;
 }
@@ -131,6 +131,10 @@ div.box div.box-info div{
 
 /* CATEGORIES - ADD */
 
+main{
+    margin-bottom: 15px;
+}
+
 main div.add-view{
     display: flex;
 }
@@ -138,8 +142,8 @@ main div.add-view{
 main div.add, main div.view{
     margin-inline : 50px;
     margin-top: 30px;
-    width: 350px;
-    height: 245px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -155,7 +159,7 @@ main div div.top{
 }
 
 main div div.ligne{
-    width: 350px;
+    width: 100%;
     height: 2px;
     background-color: #0B72CB;
     margin-bottom: 20px;

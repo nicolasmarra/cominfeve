@@ -36,9 +36,9 @@
         <li><a href="./index.php"><img src="./assets/home-regular-24.png" alt="home logo">  Homepage</a></li>
         <li><a href="./fournisseur.php"><img src="./assets/truck-solid-24.png" alt="fournisseur logo"> Fournisseur</a></li>
         <li><a href="#"><img src="./assets/briefcase-alt-regular-24.png" alt="employés logo">Employés</a></li>
-        <li><a href="#"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
-        <li><a href="#"><img src="./assets/user-regular-24.png" alt="clients logo">Clients</a></li>
-        <li><a href="#"><img src="./assets/package-regular-24.png" alt="">Commandes</a></li>
+        <li><a href="./produits.php"><img src="./assets/cart-regular-24.png" alt="produits logo">Produits</a></li>
+        <li><a href="./clients.php"><img src="./assets/user-regular-24.png" alt="clients logo">Clients</a></li>
+        <li><a href="./commandes.php"><img src="./assets/package-regular-24.png" alt="">Commandes</a></li>
         <li><a href="./categories.php"><img src="./assets/category-regular-24.png" alt="catégorie logo">Catégorie</a></li>
     </ul>
     </nav>
