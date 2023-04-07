@@ -10,9 +10,9 @@ L'interface permettra d'afficher et ajouter des données dans la base de donnée
 
 Le projet comprendra les fonctionnalités suivantes : 
 
-- *Page d'accueil* : Une page d'accueil  permettant d'accéder à toutes les autres pages du site.
-- *Formulaire d'ajout de données* : Des formulaires HTML ont été développés pour permettre l'ajout de nouvelles données dans chaque table de la base de données. Les scripts PHP correspondants contiendront les requêtes d'insertion de données dans la base de données.
-- *Affichage des données* : Des pages ont été développées pour afficher les données existantes dans la base de données, notamment un annuaire de clients, un catalogue de produits, et les détails d'une commande (client ou fournisseur).
+- **Page d'accueil** : Une page d'accueil  permettant d'accéder à toutes les autres pages du site.
+- **Formulaire d'ajout de données** : Des formulaires HTML ont été développés pour permettre l'ajout de nouvelles données dans chaque table de la base de données. Les scripts PHP correspondants contiendront les requêtes d'insertion de données dans la base de données.
+- **Affichage des données** : Des pages ont été développées pour afficher les données existantes dans la base de données, notamment un annuaire de clients, un catalogue de produits, et les détails d'une commande (client ou fournisseur).
 
 ## Prérequis pour exécuter le projet
 Pour exécuter ce projet, les éléments suivants seront nécessaires :
