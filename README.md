@@ -2,7 +2,7 @@
 # Conception d'une interface web pour une base de données
 
 
-Ce projet vise à développer une interface web complète pour interagir avec une base de données MySQL en utilisant PHP et HTML.
+Ce projet vise à développer une interface web complète pour interagir avec une base de données MySQL en utilisant PHP, HTML et CSS.
 L'interface permettra d'afficher et ajouter des données dans la base de données.
 
 
